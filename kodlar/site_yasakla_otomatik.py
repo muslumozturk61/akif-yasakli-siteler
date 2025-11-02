@@ -1,4 +1,4 @@
-import requests, ctypes
+import requests, ctypes, time
 
 url = "https://raw.githubusercontent.com/muslumozturk61/akif-yasakli-siteler/refs/heads/main/siteler.txt"
 headers = {
@@ -56,9 +56,18 @@ def ban(baning_url):
             return None
         
     writeHostFile(f"\n127.0.0.1 {baning_url}")
+
+denemeSayisi=10
         
 if (isAdmin()):
-    for i in siteListesi():
-        ban(i)
+
+    for d in range(1,denemeSayisi):
+        liste=siteListesi()
+        if(list.__len__ != 0):
+            for i in liste:
+                ban(i)
+            break
+
+        time.sleep(15)
 else:
     print("yönetici hakları gerekli")
