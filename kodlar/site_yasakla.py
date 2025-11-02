@@ -13,8 +13,9 @@ def ban(baning_url, already_label):
     with open(hosts_file_path, 'r', encoding="utf-8") as hosts_file:
         hosts_file_lines = hosts_file.readlines()
     for i in hosts_file_lines:
-            if (i == f"127.0.0.1 {baning_url}"):
-                already_label.pack()
+        print(f"127.0.0.1 {baning_url}")
+        if (i == f"127.0.0.1 {baning_url}"):
+            already_label.pack()
     with open(hosts_file_path, 'a', encoding="utf-8") as hosts_file:
         hosts_file.write(f"127.0.0.1 {baning_url}\n")
     already_label.pack_forget()

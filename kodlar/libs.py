@@ -5,6 +5,7 @@ headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 }
 
+hosts_file_path = r"C:\Windows\System32\drivers\etc\hosts"
 
 def isAdmin():
     try:
@@ -20,10 +21,26 @@ def siteListesi(url=url, headers=headers):
             for i in response.text.split("\n"):
                 if (i != ""):
                     linkler.append(i)
-            print(response.text)
             return linkler
         else:
             return []
     except Exception as e:
         print(e) 
         return []  
+    
+def readHostFile():
+    try:
+        with open(hosts_file_path, 'r', encoding="utf-8") as hosts_file:
+            return hosts_file.readlines()
+    except:
+        return []
+    
+def writeHostFile(text):
+    try:
+        with open(hosts_file_path, 'a', encoding="utf-8") as hosts_file:
+            hosts_file.write(text)
+            return True
+    except:
+        return False
+    
+
