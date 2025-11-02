@@ -1,16 +1,14 @@
 import tkinter as tk
 from tkinter import ttk
-import ctypes, sys
+import sys
 from tkinter import messagebox as mb
+import libs as l
+
+siteListesi = l.siteListesi()
 
 hosts_file_path = r"C:\Windows\System32\drivers\etc\hosts"
 ttk.Style().theme_use("xpnative")
 
-def is_admin():
-    try:
-        return ctypes.windll.shell32.IsUserAnAdmin()
-    except:
-        return False
 def ban(baning_url, already_label):
     with open(hosts_file_path, 'r', encoding="utf-8") as hosts_file:
         hosts_file_lines = hosts_file.readlines()
@@ -38,7 +36,7 @@ def deban(debaning_url, already_label):
         writeable_hosts_file.write(lines)
     already_label.pack_forget()
         
-if (is_admin()):
+if (l.isAdmin()):
     window = tk.Tk()
     window.title("site engelleyici")
     window.geometry("500x400")
