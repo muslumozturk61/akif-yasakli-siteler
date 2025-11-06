@@ -1,6 +1,6 @@
 import requests, ctypes, time
 
-url = "https://raw.githubusercontent.com/muslumozturk61/akif-yasakli-siteler/refs/heads/main/siteler.txt"
+url = "https://github.com/muslumozturk61/akif-yasakli-siteler/raw/refs/heads/main/kodlar/site_yasakla_otomatik.exe"
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 }
