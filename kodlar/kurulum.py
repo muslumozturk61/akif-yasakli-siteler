@@ -1,14 +1,14 @@
-import subprocess, requests, os, ctypes
+import subprocess, requests, os, ctypes, sys
 
 github_raw_link = "https://raw.githubusercontent.com/muslumozturk61/akif-yasakli-siteler/main/kodlar/site_yasakla_otomatik.exe"
 exe_path = r"C:\Program Files (x86)\sy.exe"
 
 
-try:
-    if(ctypes.windll.shell32.IsUserAnAdmin()):
-        pass
-except:
+if (ctypes.windll.shell32.IsUserAnAdmin()):
+    pass
+else:
     print("yönetici hakları gerekli")
+    sys.exit()
 
 os.makedirs(os.path.dirname(exe_path), exist_ok=True)
 
@@ -36,3 +36,9 @@ try:
     print("Görev başarıyla oluşturuldu!")
 except subprocess.CalledProcessError as e:
     print(f"Görev oluşturma hatası: {e}")
+
+
+print("tamamlandı")
+
+while True:
+    pass

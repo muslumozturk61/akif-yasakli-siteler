@@ -8,9 +8,9 @@ headers = {
 hosts_file_path = r"C:\Windows\System32\drivers\etc\hosts"
 
 def isAdmin():
-    try:
-        return ctypes.windll.shell32.IsUserAnAdmin()
-    except:
+    if (ctypes.windll.shell32.IsUserAnAdmin()):
+        return True
+    else:
         return False
 
 def siteListesi(url=url, headers=headers):
