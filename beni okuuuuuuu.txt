@@ -1,2 +1,9 @@
-bu kodu okuldaki İbrahim hocam için yazdım bu program sayesinde hoca bilişim kodlama dersinde
-code.org falan yapırırken diğer kimse oyun oynayamayacak.
+bu kodu okuldaki İbrahim hocam için yazdım bu program
+sayesinde hoca bilişim kodlama dersinde
+code.org falan yapırırken diğer kimse oyun oynayamayacak
+
+programı sistem dosyalarının arasına koymak gerekiyor
+ve logosunuda sistem dosyası gibi yaptım
+
+python kodlarını .exe dosyasına auto-py-to-exe kullanarak çevirdim
+bu yüzden bazı antivirüsler bunu şüpheli olarak işaretliyor inanmayın
