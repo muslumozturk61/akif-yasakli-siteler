@@ -33,19 +33,16 @@ def readHostFile():
         with open(hosts_file_path, 'r', encoding="utf-8") as hosts_file:
             return hosts_file.readlines()
     except:
-        return []
+        return ""
     
 def writeHostFile(text):
     try:
         with open(hosts_file_path, 'a', encoding="utf-8") as hosts_file:
             hosts_file.write(text)
-            return True
+            return None
     except:
-        return False
-    
+        return None
 
-
-hosts_file_path = r"C:\Windows\System32\drivers\etc\hosts"
 
 def ban(baning_url):
   
@@ -57,17 +54,15 @@ def ban(baning_url):
         
     writeHostFile(f"\n127.0.0.1 {baning_url}")
 
-denemeSayisi=10
         
 if (isAdmin()):
-
-    for d in range(1,denemeSayisi):
+    for d in range(1,10):
         liste=siteListesi()
-        if(list.__len__ != 0):
+        if(list.len != 0):
             for i in liste:
                 ban(i)
             break
 
-        time.sleep(15)
+        time.sleep(5)
 else:
     print("yönetici hakları gerekli")
