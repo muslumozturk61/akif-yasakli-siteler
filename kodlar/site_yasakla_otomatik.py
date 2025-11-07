@@ -58,7 +58,7 @@ def ban(baning_url):
 if (isAdmin()):
     for d in range(1,10):
         liste=siteListesi()
-        if(list.len != 0):
+        if(list.__len__ != 0):
             for i in liste:
                 ban(i)
             break
