@@ -5,5 +5,4 @@ code.org falan yapırırken diğer kimse oyun oynayamayacak
 programı sistem dosyalarının arasına koymak gerekiyor
 ve logosunuda sistem dosyası gibi yaptım
 
-python kodlarını .exe dosyasına auto-py-to-exe kullanarak çevirdim
-bu yüzden bazı antivirüsler bunu şüpheli olarak işaretliyor inanmayın
+python kodlarını .exe dosyasına nutika kullanarak çevirdim
